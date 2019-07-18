@@ -1,0 +1,44 @@
+PUT _template/network_fail2ban
+{
+  "index_patterns": ["fail2ban-*"],
+  "settings": {
+    "number_of_shards": 1
+  },
+   "mappings" : {
+      "properties" : {
+         "host" : {
+            "properties" : {
+               "name" : {
+                  "type" : "keyword"
+               },
+               "ip" : {
+                  "type" : "ip"
+               }
+            }
+         },
+         "source": {
+           "properties" : {
+              "address" : {
+                 "type" : "keyword"
+              },
+              "ip" : {
+                 "type" : "ip"
+              },
+              "geo.location" : {
+                 "type" : "geo_point"
+              }
+           }
+         },
+         "process": {
+           "properties" : {
+              "pid" : {
+                 "type" : "long"
+              },
+              "name" : {
+                 "type" : "keyword"
+              }
+           }
+         }
+      }
+   }
+}

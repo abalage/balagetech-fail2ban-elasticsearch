@@ -1,2 +1,5 @@
 # balagetech-fail2ban-elasticsearch
-Syslog-NG and Elasticsearch configurations to process and visualize fail2ban logs
+
+Syslog-NG and Elasticsearch configurations to process and visualize fail2ban logs.
+
+This repo was created from contents previously placed in [balagetech-central-syslog-server](https://github.com/abalage/balagetech-central-syslog-server) repository.
